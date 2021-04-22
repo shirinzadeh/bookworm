@@ -1,0 +1,54 @@
+.info {
+   .contact-info {
+      padding: 0;
+   }
+   
+   h5 {
+      padding-top: 2rem;
+   }
+
+   &__text {
+      p {
+         margin-bottom: 1rem ;
+      }
+   }
+}
+
+.contact-form {
+  margin:3rem 0;
+
+  h1 {
+    padding-bottom: 1.5rem;
+  }
+  label {
+    padding-bottom: .5rem;
+    @include xsmall {
+      font-size: .8rem;
+    }
+  }
+  .form-group {
+    padding-bottom: 2rem;
+    @include xsmall {
+      padding-bottom: 1.3rem;
+    }
+  }
+
+  .input-name {
+    @include xsmall {
+      padding-bottom: 1.3rem;
+    }
+  }
+
+  .form-control {
+    border-radius: $border-radius;
+    border-color: $line-color;
+    padding: .6rem 1rem;
+    @include placeholder {
+      font-size: .9rem;
+
+      @include xsmall {
+        font-size: .7rem;
+      }
+    }
+  }
+}

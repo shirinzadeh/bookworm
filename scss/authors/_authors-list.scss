@@ -1,0 +1,53 @@
+.authors {
+   padding: 4rem 0;
+   text-align: center;
+
+   &-filter {
+      @include flex;
+      justify-content: center;
+      cursor: pointer;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch; /* Important for iOS devices */
+      @include medium {
+         justify-content: flex-start;
+      }
+
+      li {
+         padding: .5rem 0;
+         margin: 0 .8rem;
+         scroll-snap-align: start;
+      }
+   }
+
+   // .main-btn {
+   //    background-color: $white;
+   //    color: $text-color;
+   //    border-color: $black;
+   // }
+
+   &-col {
+      @include flex-center;
+      flex-direction: column;
+
+      &__image {
+         height: 140px;
+         width: 140px;
+         border-radius: 50%;
+         background-color: $bg-color;
+      }
+   
+      &__info {
+         text-transform: capitalize;
+         margin-top: 2rem;
+   
+         &-name {
+            font-weight: $font-m;
+            margin-bottom: .5rem;
+         }
+         &-product {
+            font-size: .9rem;
+            color: $text-color-brown;
+         }
+      }
+   }
+}

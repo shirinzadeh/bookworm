@@ -1,0 +1,87 @@
+.releases {
+   .section-header {
+      @include xsmall {
+         flex-direction: column;
+      }
+   }
+   .tabs {
+      @include flex;
+      @include xsmall {
+         margin-top: .7rem;
+         justify-content: center;
+         align-items: center;
+      }
+
+      .heading-btn {
+         color: $text-color-brown;
+         cursor: pointer;
+
+         &:not(:first-child) {
+            margin-left: 2.5rem;
+
+            @include xsmall {
+               margin-left: 1.5rem;
+            }
+         }
+         &::after {
+            display: none;
+         }  
+         &:hover {
+            color: $text-color;
+         }
+         &:focus {
+            @extend .heading-btn:hover;
+         }
+      }
+   }
+
+   &-inner {
+      @include flex;
+
+      @include medium {
+         flex-direction: column;
+      }
+   }
+
+   &-aside {
+      border-radius: $border-radius;
+      padding: 8.75rem 5%;
+      margin-left: 1.5rem;
+      background-color: $blue;
+      @include flex;
+      flex-direction: column;
+
+      @include medium {
+         margin-left: 0;
+         margin-top: 1.5rem;
+         padding-top: 5rem;
+         padding-bottom: 5rem;
+      }
+
+      &__content {
+         @include flex;
+         flex-direction: column;
+         margin-top: auto;
+
+         div {
+            color: $white;
+            font-size: 2rem;
+            line-height: 2.5rem;
+   
+            strong {
+               font-size: 2.3rem;
+            }
+         }       
+         p {
+            font-size: 1rem;
+            text-transform: uppercase;
+            color: #beb4b4;
+            padding: 1rem 0;
+         }
+         .main-btn {
+            background-color: $yellow;
+            color: $blue;
+         }
+      }
+   }
+}

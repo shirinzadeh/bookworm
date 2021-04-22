@@ -1,0 +1,62 @@
+//Font Variables
+$text-font: 'Cerebri Sans';
+$font-r: 400;
+$font-m: 500;
+$font-b: bold;
+
+//Color Variables
+$text-color: #161619;
+$text-color-brown: #7c6e65;
+$bg-color: #fff6f6;
+$line-color: #eae8e4;
+$black: #19110b;
+$blue: #041e42;
+$red: #f75454;
+$yellow: #fced70;
+$grey: #7c7c84;
+$star-color: #ffbd00;
+$white: #fff;
+
+$line-height: 1.5rem;
+$border-radius: .5rem;
+
+//Mixins
+@mixin flex-center {
+   @include flex;
+   justify-content: center;
+   align-items: center;
+}
+
+@mixin bg-cover {
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+}  
+
+@mixin main-btn {
+   padding: 1rem 2.9rem;
+   text-transform: capitalize;
+   border-radius: $border-radius;
+   font-weight: $font-m;
+   @include small {
+      padding: .5rem 2rem;
+    }
+}
+
+@mixin arrow-down {
+   content: '\f107';
+   font-family: 'Font Awesome 5 Free';
+   font-weight: 700;
+}
+
+@mixin arrow-right {
+   content: '\f105';
+   font-family: 'Font Awesome 5 Free';
+   font-weight: 600;
+}
+
+// @mixin main-btn {
+//    padding: 1rem 2.9rem;
+//    text-transform: capitalize;
+//    border-radius: .5rem;
+// }

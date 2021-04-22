@@ -1,0 +1,82 @@
+.cart {
+   .heading > span {
+      text-transform: lowercase;
+      font-weight: $font-r;
+   }
+
+   table {
+      border: 1px solid $line-color;
+      background-color: $white;
+   
+      tr {
+         border: 1px solid $line-color;
+      }
+   
+      tbody {
+         th {
+            font-weight: $font-r;
+      
+            .card-author {
+               margin: 0;
+            }
+         }
+
+         td {
+            padding-left: 1rem;
+            padding-right: 1rem;
+         }
+
+         img {
+            width: 100px;
+            max-width: 100px;
+            margin-right: .5rem;
+         }
+      }
+   }
+
+   //thead padding left only first column
+   .table>:not(:last-child)>:last-child>:first-child {
+      padding-left: 3rem;
+      @include large {
+         padding-left: 1rem;
+      }
+   }
+
+   // thead padding top and bottom
+   .table>:not(:last-child)>:last-child>* {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+   }
+
+   // All tr tags inside tbody
+   .table>:last-child>*>* {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+      @include large {
+         padding-top: 3rem;
+         padding-bottom: 3rem;
+      }
+   }
+
+   //tbody padding from left  
+   .table>:last-child>*>:first-child {
+      padding-left: 3rem;
+      @include large {
+         padding-left: 1rem;
+      }
+   }
+   //tbody padding from right
+   .table>:last-child>*>:last-child {
+      padding-right: 1rem;
+   }
+}
+
+.quantity {
+   @include inline-flex;
+   align-items: center;
+   border: 1px solid $line-color;
+
+   &__count {
+      margin: 0 .5rem;
+   }
+}

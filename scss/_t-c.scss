@@ -1,0 +1,22 @@
+.tc {
+  &-row {
+   margin-bottom: 3.5rem;
+   line-height: 1.5rem;
+
+   .tc-title {
+      text-transform: capitalize;
+      font-size: 1.5rem;
+      font-weight: $font-m;
+      margin-bottom: 1.9rem;
+      @include small {
+         font-size: 1.3rem;
+      }
+   }
+
+   ol {
+      li {
+         margin-bottom: .6rem;
+      }
+   }
+  }
+}

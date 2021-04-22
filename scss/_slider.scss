@@ -1,0 +1,130 @@
+.slider-section {
+  margin-top: 1.9rem;
+  @include xsmall {
+    margin-top:  1rem;
+  }
+}
+
+.slider {
+  background: $yellow url(../img/slider-bg.jpg) center center/cover no-repeat ;
+  min-height: 100%;
+  color: $blue;
+  border-radius: $border-radius;
+  padding: 1.5rem 1.2rem 7.6rem;
+  position: relative;
+
+  @include small {
+    // padding-bottom: 0;
+  }
+  @include xsmall {
+    padding-bottom: 4.6rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  &-carousel {
+    @include calc(padding-left, 7.25rem - 1.2rem);
+    @include calc(padding-right, 6.25rem - 1.2rem);
+    @include large {
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
+    @include small {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+
+    //owl carousel class
+    .owl-nav button.owl-prev {
+      @include transform(translateY(50%));
+      @include small {
+        @include transform(translateY(0%));
+      }
+    }
+    .owl-nav button.owl-next {
+      @extend button.owl-prev;
+    }
+  }
+
+  &-text {
+    padding-top: 6.1rem; 
+
+    @include xsmall {
+      padding-top: 4.1rem;
+    }
+
+    &__subheading {
+      text-transform:  uppercase;
+      font-weight: $font-b;
+      opacity: .5;
+
+      @include large {
+        font-size: .9rem;
+      }
+    }
+
+    &__heading {
+      font-size: 3.75rem;
+      padding: 1.4rem 0 2rem;
+
+      @include large {
+        font-size: 3.4rem;
+        line-height: 4rem;
+      }
+      @include xsmall {
+        font-size: 3rem;
+        line-height: 3.5rem;
+      }
+    }
+  }
+
+  &-timer {
+    @extend .slider-text;
+
+    p {
+      font-weight: $font-m;
+    }
+
+    &__discount {
+      @include flex;
+
+      p {
+        font-size: 1.9rem;
+        margin-right: 1rem;
+      }
+      del {
+        align-self: center;
+      }
+    }
+
+    &__time {
+      margin: 1.8rem 0 2.7rem;
+
+      .warning {
+        font-size: 1.2rem;
+        padding-bottom: 1.5rem;
+      }
+    
+    }
+
+    &__progress {
+      @include flex;
+      flex-direction: column;
+
+      .progress-label {
+        @include flex;
+        justify-content: space-between;
+        padding-bottom: .7rem;
+      }
+      .progress {
+        border-radius: $border-radius;
+        background-color: $white;
+
+        &-bar {
+          background-color: $blue;
+          border-radius: $border-radius;
+        }
+      }
+    }
+  }
+}

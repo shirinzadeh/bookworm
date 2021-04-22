@@ -1,0 +1,104 @@
+.list {
+   &-header {
+      @include flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: .9rem;
+
+      @include xsmall {
+         flex-direction: column;
+         // justify-content: start;
+         align-items: flex-start;
+      }
+
+      &__filter {
+         @include flex;
+         align-items: center;
+
+         @include xsmall {
+            // display: inline-block;
+         }
+      }
+
+      &__dropdown {
+         @include flex;
+         margin-left: auto;
+
+         @include medium {
+            margin: auto;
+         }
+         @include xsmall {
+            margin-top: 5px;
+         }
+         
+         .form-select {
+            border: {
+               top: none;
+               left: none;
+               right: none;
+            }
+            border-bottom: 2px solid $line-color;
+            width: auto;
+            margin-left: 2rem;
+            &:focus {
+               border-width: 3px ;
+            }
+
+            @include medium {
+               // margin-left: .7rem;
+               padding-left: 0;
+            }
+            @include xsmall {
+               margin-left: 0;
+            }
+
+            option {
+               font-size: .9rem;
+            }
+         }
+      }
+
+      &__view {
+         font-size: 1.2rem;
+
+         button {
+            border: 1px solid $line-color;
+            @include medium {
+               padding: 6px;
+            }
+         }
+      }
+   }
+
+   &-content {
+      margin: 2.5rem 0;
+      @include medium {
+         margin: 1.5rem 0;
+      }
+
+      .card {
+         @include transition;
+         img {
+            height: 400px;
+            max-height: 400px;
+
+            @include medium {
+               height: 300px;
+               max-height: 300px;
+            }
+            @include xsmall {
+               height: 250px;
+               max-height: 250px;
+            }
+         }
+
+         &:hover {
+            border-color: $text-color;
+            @include box-shadow( 0 0 20px #ccc);
+         }
+      }
+      .card-body {
+         text-align: center;
+      }
+   }
+}

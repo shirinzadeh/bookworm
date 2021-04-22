@@ -1,0 +1,439 @@
+.header {
+  &-top {
+    @include flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .7rem 0;
+
+    @include medium {
+      font-size: .9rem;
+    }
+    @include small {
+      // display: none;
+    }
+
+    &__contact {
+      a{
+        margin-right: 1rem;
+
+        @include medium {
+          margin-right: .5rem;
+        }
+      }
+    }
+
+    &__icon {
+      @include flex;
+      align-items: center;
+      white-space: nowrap;
+
+      & > a {
+        margin-right: 1.8rem;
+        padding: 2px 0;
+        
+        @include medium {
+          margin-right: 1rem;
+        }
+      }
+
+      .form-select {
+        border: none;
+        width: auto;
+        padding: 0 1.3rem 0 .5rem;
+        background-position-x: right;
+
+        @include medium {
+          font-size: .9rem;
+        }
+        @include xsmall{
+          padding-right: 1rem;
+        }
+      }
+    }
+  }
+
+  .header-middle-container{
+    border: {
+      top: 2px solid $line-color;
+      bottom: 2px solid $line-color;
+    }
+  }
+
+  &-middle {
+    padding: 1rem 0;
+    @include medium {
+      padding: .5rem 0;
+    }
+    @include small {
+      padding: 4px 0;
+    }
+
+    .logo {
+      @include large {
+        margin-right: 0;
+      }
+    }
+
+    .navbar {
+      .navbar-toggler {
+        padding: 0;
+        z-index: 999999;
+        margin-right: .5rem;
+      }
+
+      .navbar-nav {
+        .nav-item {
+          margin-left: 2rem;
+          @include xlarge {
+            margin-left: 1.3rem;
+          }
+          @include large {
+            margin-left: 0;
+            margin-right: .6rem;
+          }
+  
+          .nav-link {
+            font-weight: $font-m;
+          }
+        }
+      }
+
+      .dropdown-toggle::after {
+        border: none;
+      }
+
+      .dropdown-item {
+        padding: .5rem 1.5rem;
+
+        &:active {
+          background-color: $yellow;
+          color: $blue;
+        }
+      }
+
+    }
+
+    &__info {
+      @include flex;
+      justify-content: flex-end;
+
+      @include large {
+        display:block;
+      }
+
+      &-question {
+        @include flex;
+        align-items: center;
+
+        i {
+          font-size: 1.9rem;
+
+          @include large {
+            font-size: 1.3rem;
+          }
+        }
+
+        div {
+          margin-left: .7rem;
+          p:first-child {
+            color: #7e7e7e;
+            font-size: .8rem;
+            padding-bottom: .5rem;
+
+            @include large {
+              color: $text-color;
+              font-size: .9rem;
+              padding-bottom: 0;
+            }
+          }
+          p:nth-child(2) {
+            color: $black;
+            font-weight: $font-m;
+
+            @include large {
+              display: none;
+            }
+          }
+        }
+      }
+      &-phone {
+        @extend .header-middle__info-question;
+        padding-left: 2.1rem;
+        
+        @include large {
+          padding-left: 0;
+          margin-top: .5rem;
+        }
+      }
+    }
+  }
+
+  .header-bottom-container {
+    background-color: $blue;
+  }
+
+  &-bottom {
+    @include flex;
+    color: $white;
+
+    &__categories {
+      @include flex;
+      @include transition;
+      position: relative;
+
+      .dropdown-toggle {
+        color: $white;
+        outline: none;
+        box-shadow: none;
+        font-weight: $font-m;
+        padding: 0 1.8rem;
+        @include flex;
+        align-items: stretch;
+
+        @include large {
+          padding: 0 1rem;
+        }
+        @include small {
+          padding: 0 .5rem;
+        }
+
+        &::after {
+          display: none;
+        }
+        .toggler-btn {
+          .bar {
+            background-color: $white;
+          }
+        }
+        p {
+          padding-left: 1.2rem;
+          @include small {
+            padding-left: 0;
+          }
+
+          i {
+            visibility: hidden;
+            padding-left: 2rem;
+  
+            @include large {
+              padding-left: 1rem;
+            }
+            @include small {
+              padding-left: .5rem;
+            }
+          }
+        }
+      }
+
+      &:hover {
+        background-color: $yellow;
+        @include transition;
+        
+        .dropdown-toggle {
+          color: $blue;
+          .bar {
+            background-color: $blue !important;
+          }
+          i {
+            visibility: visible;
+          }
+        }
+      }
+
+      .dropdown-menu {
+        padding: 0;
+        border-color: $line-color;
+        border-radius: 0;
+        width: 100%;
+        margin-top: 1.4rem !important;
+        color: $text-color;
+
+        @include large {
+          margin-top: 1.2rem !important;
+        }
+        @include small {
+          margin-top: .5rem !important;
+        }
+
+        @include xsmall {
+          width: 70vw;
+        }
+        @include extra-xsmall {
+          width: 90vw;
+        }
+
+        .dropdown-item {
+          padding: 1rem 1.3rem;
+          border-bottom: 1px solid $line-color;
+          color: $blue;
+          white-space: normal;
+          @include flex;
+          i {
+            margin-right: .9rem;
+
+            &.right-arrow {
+              margin-left: auto;
+              margin-right: 0;
+            }
+          }
+
+          &:hover {
+            color: $yellow;
+            background-color: $blue;
+          }
+        }
+      }
+    }
+
+    &__input {
+      @include flex;
+      flex: 1;
+      padding: .95rem 0;
+      margin-left: calc(84px - 1.8rem - 2rem - 10px);
+      margin-right: 2.1rem; //margin size b/w icons
+
+      @include small {
+        padding: .5rem 0;
+        margin-right: 0;
+      }
+
+      .form {
+        @include flex;
+        flex-grow: 1;
+
+        &-control {
+          padding: .75rem;
+          border-radius: .6rem 0 0 .6rem;
+          margin: 0 !important;
+          @include placeholder {
+            font-size: .9em;
+          }
+
+          @include large {
+            padding: .6rem;
+          }
+          @include small {
+            padding: .3rem;
+          }
+        }
+      }
+
+      .form__button-category {
+        border-radius: 0;
+        width: auto;
+        border: 0;
+        padding-right: 3.8rem;
+        padding-left: 1.9rem;
+        font-size: .9em;
+        color: $black;
+        background-color: $white;
+        white-space: nowrap;
+        @include large {
+          padding-right: 2rem;
+          padding-left: 1rem;
+        }
+        @include medium {
+          display: none;
+        }
+
+        // &::after {
+        //   content: '\f107';
+        //   font-family: 'Font Awesome 5 Free';
+        //   font-weight: 700;
+        //   padding-left: 1.9rem;
+
+        //   @include large {
+        //     padding-left: 1rem;
+        //   }
+        // }
+      }
+
+      .form__button-search {
+        background-color: $yellow;
+        border-radius: 0 .6rem .6rem 0;
+        padding: 0 1.25rem;
+
+        @include large {
+          padding: 0 1rem;
+        }
+        i {
+          font-size: 1.2rem;
+
+          @include large {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+
+    &__icons {
+      @include flex;
+      .header-icon {
+        font-size: 1.2rem;
+        color: $white;
+        cursor: pointer;
+        &:nth-child(2) {
+          margin: 0 2.1rem;
+        }
+  
+        @include small {
+          color: $blue;
+          font-size: 1rem;
+          &:nth-child(2) {
+            margin: 0 1.1rem;
+          }
+        }
+        @include xsmall {
+          &:nth-child(2) {
+            margin: 0 .6rem ;
+          }
+        }
+
+        &--cart {
+          position: relative;
+        }
+                  
+        &__count {
+          position: absolute;
+          top: -5px;
+          left: -5px;
+          font-size: 7px;
+          font-weight: $font-b;
+          background-color: $yellow;
+          padding: .2rem;
+          border: 1px solid $yellow;
+          border-radius: 50%;
+          color: $blue;
+        }
+      }
+
+      .cart-price {
+        padding-left: .7rem;
+        margin-top: auto;
+        font-weight: $font-m;
+        line-height: .8rem;
+        @include xsmall {
+          padding-left: 5px;
+          font-size: .9rem;
+        }
+      }
+    }
+  }
+}
+
+//Display dropdown menu when hover
+.dropdown-submenu {
+  position:relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top:0%;
+  left:100%;
+}
+
+@media all and (min-width: 575.98px) {
+	.dropdown .dropdown-menu{ display: none; }
+	.dropdown:hover .dropdown-menu{ display: block; }
+  .dropdown:hover .dropdown-submenu>.dropdown-menu{ display: none;  }
+  .dropdown-submenu:hover>.dropdown-menu{ display: block !important;  }
+	// .dropdown .dropdown-menu{ margin-top:0; }
+}

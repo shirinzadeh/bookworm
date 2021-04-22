@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Bookworm</title>
+   <!-- Bootstrap 5 cdn -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+   <!-- Bootstrap 5 icons  -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+   <!-- Font awesome  -->
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+   <!-- Owl carousel  -->
+   <link rel="stylesheet" href="assets/plugins/owl-carousel/css/owl.carousel.min.css">
+   <link rel="stylesheet" href="assets/plugins/owl-carousel/css/owl.theme.default.min.css">
+   <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+   <header class="header">
+      <div class="container">
+         <div class="header-top">
+            <div class="header-top__contact">
+               <a href="tel:+1 234-567-8901">+1 234-567-8901</a>
+               <a href="email">info@bookworm.com</a>
+            </div>
+            <div class="header-top__icon">
+               <a href="" class="d-none d-md-block"><i class="bi bi-geo-alt"></i> Store Location</a>
+               <a href="" class="d-none d-md-block"><i class="bi bi-geo-alt"></i> Track your order</a>
+               <select class="form-select" aria-label="Default select example">
+                  <option selected>USD</option>
+                  <option value="1">AZN </option>
+                  <option value="2">TL </option>
+               </select>
+               <select class="form-select" aria-label="Default select example">
+                  <option selected>EN </option>
+                  <option value="1">AZ</option>
+                  <option value="2">TR</option>
+                  <option value="2">RUS</option>
+               </select>
+            </div>
+         </div>
+      </div>
+
+      <div class="header-middle-container">
+         <div class="container">
+            <div class="header-middle">
+               <nav class="navbar navbar-expand-md ">
+                  <div class="d-flex">
+                     <a href="/" class="navbar-brand logo my-auto d-none d-sm-block"><img src="assets/img/logo.jpg" alt="Logo"></a>
+                     <a href="/" class="navbar-brand logo my-auto d-sm-none"><img src="assets/img/logo-xs-device.jpg" alt="Logo"></a>
+                     <button class="navbar-toggler order-first" type="button" aria-expanded="false" aria-label="Toggle navigation">
+                        <div class="toggler-btn">
+                           <div class="bar bar1"></div>
+                           <div class="bar bar2"></div>
+                           <div class="bar bar3"></div>
+                        </div>
+                     </button>
+                  </div>
+                  <div class="side-menu order-last">
+                     <ul class="navbar-nav">
+                        <li class="nav-item">
+                           <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link active" aria-current="page" href="#">Best seller</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link active" aria-current="page" href="shop-list.html">Shop</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Features <i class="fas fa-angle-down"></i>
+                           </a>
+                           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                              <li><a class="dropdown-item" href="#">Action</a></li>
+                              <li><a class="dropdown-item" href="#">Another action</a></li>
+                              <li><a class="dropdown-item" href="#">Something else here</a></li>
+                           </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Pages <i class="fas fa-angle-down"></i>
+                           </a>
+                           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                              <li><a class="dropdown-item" href="faq.html">Faq</a></li>
+                              <li><a class="dropdown-item" href="authors-list.html">Authors</a></li>
+                              <li><a class="dropdown-item" href="404.html">404</a></li>
+                              <li><a class="dropdown-item" href="t-c.html">Terms and Conditions</a></li>
+                              <li><a class="dropdown-item" href="coming-soon.html">Coming Soon</a></li>
+                              <li><a class="dropdown-item" href="pricing.html">Pricing</a></li>
+                              <li><a class="dropdown-item" href="checkout.html">Checkout</a></li>
+                              <li><a class="dropdown-item" href="order-received.html">Received orders</a></li>
+                              <li><a class="dropdown-item" href="order-tracking.html">Tracking orders</a></li>
+                           </ul>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <!-- Header shop icons  -->
+                  <div class="header-bottom__icons d-md-none">
+                     <a href="wishlist.html" class="header-icon"><i class="bi bi-heart"></i></a>
+                     <a href="dashboard.html" class="header-icon"><i class="bi bi-person"></i></a>
+                     <a href="shop-cart.html" class="header-icon header-icon--cart"><i class="bi bi-bag"></i>
+                        <span class="header-icon__count">3</span>
+                     </a>
+                     <div class="cart-price ">$40.93</div>
+                  </div>
+               </nav>
+            </div>
+         </div>
+      </div>
+      <div class="header-bottom-container">
+         <div class="container">
+            <div class="header-bottom">
+               <li class="header-bottom__categories">
+                  <!-- toggle dropdown menus  -->
+                  <a href="#" id="categoriesDropdownMenuLink" class="btn dropdown-toggle my-auto " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                     <div class="toggler-btn">
+                        <div class="bar "></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                     </div>
+                     <p class="my-auto d-none d-sm-block">Browse categories <i class="fas fa-angle-down"></i></p>
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="categoriesDropdownMenuLink">
+                     <!-- dropdown submenu -->
+                     <li class="dropdown-submenu">
+                        <a class="dropdown-item dropdown-toggle" href="#">
+                           <i class="fas fa-image"></i>Arts & Photography
+                           <i class="fas fa-angle-right right-arrow"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                           <li><a class="dropdown-item" href="#">Submenu0</a></li>
+                           <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Submenu 1</a>
+                              <ul class="dropdown-menu">
+                                 <li><a class="dropdown-item" href="#">Subsubmenu1</a></li>
+                                 <li><a class="dropdown-item" href="#">Subsubmenu1</a></li>
+                              </ul>
+                           </li>
+                        </ul>
+                     </li>
+                     <!-- dropdown submenu  -->
+                     <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">
+                           <i class="fas fa-list-alt"></i>Biography
+                           <i class="fas fa-angle-right right-arrow"></i></a>
+                        <ul class="dropdown-menu">
+                           <li><a class="dropdown-item" href="#">Submenu0</a></li>
+                           <li class="dropdown-submenu">
+                              <a class="dropdown-item dropdown-toggle" href="#">Submenu 1</a>
+                           </li>
+                        </ul>
+                     </li>
+                     <!-- dropdown submenu -->
+                     <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">
+                           <i class="fas fa-utensils"></i>Food & Drink
+                           <i class="fas fa-angle-right right-arrow"></i></a>
+                        <ul class="dropdown-menu">
+                           <li><a class="dropdown-item" href="#">Submenu0</a></li>
+                           <li class="dropdown-submenu">
+                              <a class="dropdown-item dropdown-toggle" href="#">Submenu 1</a>
+                           </li>
+                        </ul>
+                     </li>
+                     <li>
+                        <a href="" class="dropdown-item"> <i class="fas fa-stethoscope"></i>Health</a>
+                     </li>
+                     <li>
+                        <a href="" class="dropdown-item"><i class="fas fa-running"></i>Sports</a>
+                     </li>
+                     <li>
+                        <a href="" class="dropdown-item"><i class="fas fa-grin-hearts"></i>Romance</a>
+                     </li>
+                     <!-- dropdown submenu  -->
+                     <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">
+                           <i class="fas fa-child"></i> Children
+                           <i class="fas fa-angle-right right-arrow"></i></a>
+                        <ul class="dropdown-menu">
+                           <li><a class="dropdown-item" href="#">Submenu0</a></li>
+                           <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Submenu 1</a>
+                              <ul class="dropdown-menu">
+                                 <li><a class="dropdown-item" href="#">Subsubmenu1</a></li>
+                                 <li><a class="dropdown-item" href="#">Subsubmenu1</a></li>
+                              </ul>
+                           </li>
+                        </ul>
+                     </li>
+                     <li>
+                        <a href="" class="dropdown-item"><i class="fas fa-pen"></i>History</a>
+                     </li>
+                     <li>
+                        <a href="" class="dropdown-item"><i class="fas fa-plane"></i>Travel & Holiday Guides</a>
+                     </li>
+                  </ul>
+               </li>
+               <!-- Header search input  -->
+               <div class="header-bottom__input">
+                  <form class="form ">
+                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                     <select class="form-select form__button-category" aria-label="Default select example">
+                        <option selected>All categories</option>
+                        <option value="1">All</option>
+                        <option value="2">categories</option>
+                     </select>
+                     <button class="btn form__button-search" type="submit">
+                        <i class=" bi bi-search"></i>
+                     </button>
+                  </form>
+               </div>
+               <!-- Header shop icons  -->
+               <div class="header-bottom__icons my-auto d-none d-md-flex">
+                  <a href="wishlist.html" class="header-icon"><i class="far fa-heart"></i></a>
+                  <a href="dashboard.html" class="header-icon"><i class="far fa-user"></i></a>
+                  <a href="shop-cart.html" class="header-icon header-icon--cart"><i class="fas fa-shopping-bag"></i>
+                     <span class="header-icon__count">3</span>
+                  </a>
+                  <div class="cart-price ">$40.93</div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </header>
+
+   <div class="container">
+      <div class="bread-content">
+         <div class="bread">Blog Single</div>
+         <div class="breadcrumb"><a href="/">Home</a><span></span>
+            <a href="blog.html">Blog</a> <span></span> Blog Single
+         </div>
+      </div>
+   </div>
+   <div class="hero-wrap">
+      <div class="hero-wrap-bg"></div>
+   </div>
+
+   <section class="info blogsingle">
+      <div class="info-header blog-card ">
+         <small class="card-tag">Romance</small>
+         <h1>Activities of the Frankfurt Book International</h1>
+         <div class="card-footer">
+            <small>10 November 2019 <span>0 comment</span></small>
+         </div>
+      </div>
+      <div class="info-content">
+         <div class="info__text">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non velit impedit eos distinctio nulla, nam, vel itaque in repudiandae obcaecati quaerat commodi totam repellat, corporis ratione est exercitationem natus praesentium repellendus. Iste incidunt sequi inventore at porro dolore corrupti laborum!</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic repudiandae non inventore nemo cumque fuga. Soluta quisquam ullam dolorem, et mollitia explicabo recusandae maxime corporis voluptatibus omnis minima animi obcaecati eum harum eos esse unde dolores laborum laboriosam nisi pariatur facilis voluptates neque. Praesentium, vitae! Sunt hic atque ad dolores! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos dolorum delectus officia. Quam dolor iste similique, facere ullam sint quo minus sequi sed. Sequi distinctio culpa illum ab odio accusamus.
+               <br><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas sequi ullam nihil nisi, tempora, doloremque nobis quis hic ea recusandae facilis dicta repudiandae ipsa aperiam! Iure dolorem perspiciatis vero voluptas, cum suscipit at enim! Consequuntur corrupti autem laudantium ad sunt?
+            </p>
+         </div>
+         <!-- Blog gallery  -->
+         <div class="blogsingle-gallery">
+            <div id="blogSingle" class="owl-carousel owl-theme">
+               <div class="item"><img src="assets/img/shop1.jpg" alt=""></div>
+               <div class="item"><img src="assets/img/shop.jpg" alt=""></div>
+               <div class="item"><img src="assets/img/shop1.jpg" alt=""></div>
+               <div class="item"><img src="assets/img/shop.jpg" alt=""></div>
+               <div class="item"><img src="assets/img/shop1.jpg" alt=""></div>
+            </div>
+         </div>
+         <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis diam erat. Duis velit lectus, posuere a blandit sit amet, tempor at lorem. Donec ultricies, lorem sed ultrices interdum, leo metus luctus sem, vel vulputate diam ipsum sed lorem. Donec tempor arcu nisl, et molestie massa scelerisque ut. Nunc at rutrum leo. Mauris metus mauris, tristique quis sapien eu, rutrum vulputate enim.
+            <br><br>
+            Pellentesque sodales augue eget ultricies ultricies. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur sagittis ultrices condimentum.
+         </p>
+         <!-- Blog Tags -->
+         <div class="tagcloud">
+            <a href="" class="tagcloud-link">books</a>
+            <a href="" class="tagcloud-link">romance</a>
+            <a href="" class="tagcloud-link">arts</a>
+            <a href="" class="tagcloud-link">kids</a>
+         </div>
+         <!-- Social icon share buttons  -->
+         <div class="blogsingle-share">
+            <p>1923 <span>Shares</span></p>
+            <div class="blogsingle-share__buttons">
+               <a href="https://facebook.com/sharer/sharer.html?u=https://markodenic.com" target="_blank" rel="noopener">
+                  <button class="btn share-btn fb">
+                     <i class="fab fa-facebook-f"></i> <span>facebook</span>
+                  </button>
+               </a>
+               <a href="https://twitter.com/intent/tweet/?text=Check%20this%20fantastic%20website&url=https://markodenic.com" target="_blank" rel="noopener">
+                  <button class="btn share-btn tw">
+                     <i class="fab fa-twitter"></i> <span>twitter</span>
+                  </button>
+               </a>
+               <a href="https://api.whatsapp.com/send?text=Check%20this%20fantastic%20website%20https://markodenic.com" target="_blank" rel="noopener">
+                  <button class="btn share-btn wp">
+                     <i class="fab fa-whatsapp"></i> <span>whatsapp</span>
+                  </button>
+               </a>
+               <button class="btn more-btn fas fa-plus"></button>
+            </div>
+         </div>
+         <!-- Blog single author information  -->
+         <div class="blogsingle-author">
+            <div><img src="assets/img/author1.jpg" class="image" alt="Author image"></div>
+            <div class="information">
+               <div class="information__name">john doe</div>
+               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi assumenda enim quidem sapiente eligendi perferendis eaque obcaecati veniam ex tempora!</p>
+               <div class="information__social">
+                  <a href=""><i class="fab fa-instagram"></i></a>
+                  <a href=""><i class="fab fa-facebook"></i></a>
+                  <a href=""><i class="fab fa-youtube"></i></a>
+                  <a href=""><i class="fab fa-twitter"></i></a>
+               </div>
+            </div>
+         </div>
+         <div class="blogsingle-control">
+            <a href="#" class="post-prev">
+               <i class="fas fa-long-arrow-alt-left"></i>
+               <div class="post-info">
+                  <div class="post-title">previous post</div>
+                  <div class="post-name">A Photo Journalist's Transformative </div>
+               </div>
+            </a>
+            <a href="#" class="post-next">
+               <div class="post-info">
+                  <div class="post-title">next post</div>
+                  <div class="post-name">Wardrobe Essentials Chinos</div>
+               </div>
+               <i class="fas fa-long-arrow-alt-right"></i>
+            </a>
+         </div>
+
+         <section class="recommend">
+            <div class="info-heading">you may also like</div>
+            <div class="row">
+               <div class="col-md-6">
+                  <div class="card blog-card card-hover">
+                     <div class="card-image">
+                        <a href="#"><img src="assets/img/shop1.jpg" class="card-img-top recommend-img" alt="blog image"></a>
+                        <div class="card-overlay">
+                           <a href=""><i class="far fa-play-circle"></i></a>
+                        </div>
+                     </div>
+                     <div class="card-body">
+                        <small class="card-tag">Romance</small>
+                        <a href="#">
+                           <h2 class="card-title">Significant reading has a more info number</h2>
+                        </a>
+                        <p class="card-text">It’s nice to win awards. Last night, the Ueno team in Reykjavík came home from the Icelandic Web Awards.</p>
+                     </div>
+                     <div class="card-footer">
+                        <small>10 November 2019 <span>0 comment</span></small>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <div class="card blog-card card-hover">
+                     <div class="card-image">
+                        <a href="#"><img src="assets/img/shop.jpg" class="card-img-top recommend-img" alt="blog image"></a>
+                        <div class="card-overlay">
+                           <a href=""><i class="far fa-play-circle"></i></a>
+                        </div>
+                     </div>
+                     <div class="card-body">
+                        <small class="card-tag">Romance</small>
+                        <a href="#">
+                           <h2 class="card-title">Significant reading has a more info number</h2>
+                        </a>
+                        <p class="card-text">It’s nice to win awards. Last night, the Ueno team in Reykjavík came home from the Icelandic Web Awards.</p>
+                     </div>
+                     <div class="card-footer">
+                        <small>10 November 2019 <span>0 comment</span></small>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <section class="reviews">
+            <div class="info-heading">Reviews (3)</div>
+            <div class="review-inset">
+               <div class="review-inset__title">Amazing story! You'll LOVE it</div>
+               <div class="stars d-inline-block">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+               </div>
+               <div class="review-inset__text">
+                  Such an incredibly complex story! I had to buy it because there was a waiting list of 30+ at the local library for this book. Thrilled that I made the purchase
+               </div>
+               <div class="review-inset__date">Staci, February 22, 2020</div>
+               <div class="review-inset__buttons">
+                  <i class="far fa-thumbs-up"></i> <span>90</span>
+                  <i class="far fa-thumbs-down"></i> <span>10</span>
+                  <i class="far fa-flag"></i>
+               </div>
+            </div>
+            <div class="review-inset">
+               <div class="review-inset__title">Amazing story! You'll LOVE it</div>
+               <div class="stars d-inline-block">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+               </div>
+               <div class="review-inset__text">
+                  Such an incredibly complex story! I had to buy it because there was a waiting list of 30+ at the local library for this book. Thrilled that I made the purchase
+               </div>
+               <div class="review-inset__date">Staci, February 22, 2020</div>
+               <div class="review-inset__buttons">
+                  <i class="far fa-thumbs-up"></i> <span>90</span>
+                  <i class="far fa-thumbs-down"></i> <span>10</span>
+                  <i class="far fa-flag"></i>
+               </div>
+            </div>
+            <div class="review-inset">
+               <div class="review-inset__title">Amazing story! You'll LOVE it</div>
+               <div class="stars d-inline-block">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+               </div>
+               <div class="review-inset__text">
+                  Such an incredibly complex story! I had to buy it because there was a waiting list of 30+ at the local library for this book. Thrilled that I made the purchase
+               </div>
+               <div class="review-inset__date">Staci, February 22, 2020</div>
+               <div class="review-inset__buttons">
+                  <i class="far fa-thumbs-up"></i> <span>90</span>
+                  <i class="far fa-thumbs-down"></i> <span>10</span>
+                  <i class="far fa-flag"></i>
+               </div>
+            </div>
+            <div class="newreview review">
+               <div class="review-head">Write a Review</div>
+               <div class="d-inline">Select a rating</div>
+               <div class="stars d-inline-block">
+                  <i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+               </div>
+               <form action="" class="contact-form needs-validation" novalidate>
+                  <div class="form-group">
+                     <label for="textarea">Details please! Your review helps other shoppers.</label>
+                     <textarea class="form-control" id="textarea" rows="5" placeholder="What did you like or dislike? What should other shoppers know before buying?" required></textarea>
+                     <div class="invalid-feedback">Please provide a message</div>
+                  </div>
+                  <div class="form-group">
+                     <label for="title">Add a title</label>
+                     <input type="text" id="title" class="form-control" placeholder="20 characters remaining" required>
+                     <div class="invalid-feedback">Please provide a title</div>
+                  </div>
+                  <button class="btn main-btn">submit a review</button>
+               </form>
+            </div>
+         </section>
+
+      </div>
+   </section>
+
+   <footer class="footer bg-color">
+      <div class="container">
+         <div class="row">
+            <div class="col-12">
+               <div class="footer-top">
+                  <div class="section-header">
+                     <div class="heading">join our newsletter</div>
+                  </div>
+                  <p class="subtext">Signup to be the first to hear about exclusive deals, special offers and upcoming
+                     collections</p>
+                  <form>
+                     <input class="form-control " type="search" placeholder="Enter email for weekly newsletter." aria-label="Search">
+                     <button class="btn main-btn main-btn--second" type=" submit">Subscribe</button>
+                  </form>
+               </div>
+            </div>
+         </div>
+         <div class="footer-middle">
+            <div class="row">
+               <div class="col-md-3 text-center text-md-start">
+                  <div class="logo d-xl-block d-lg-block my-auto"><img src="assets/img/logo.jpg" alt="Logo"></div>
+                  <div class="contact-info">
+                     <p class="mb-3">1418 River Drive, Suite 35 Cottonhall, CA 9622 United States</p>
+                     <p>sale@bookworm.com</p>
+                     <p>+1 246-345-0695</p>
+                  </div>
+                  <div class="social-info">
+                     <a href=""><i class="fab fa-instagram"></i></a>
+                     <a href=""><i class="fab fa-facebook"></i></a>
+                     <a href=""><i class="fab fa-youtube"></i></a>
+                     <a href=""><i class="fab fa-twitter"></i></a>
+                  </div>
+               </div>
+               <div class="col-md-8">
+                  <div class="footer__list">
+                     <div class="row">
+                        <div class="col-md-3 col-6">
+                           <h6>Explore</h6>
+                           <ul>
+                              <a href="">
+                                 <li>About us</li>
+                              </a>
+                              <a href="">
+                                 <li>Site map</li>
+                              </a>
+                              <a href="">
+                                 <li>bookmarks</li>
+                              </a>
+                              <a href="">
+                                 <li>Sign in/join</li>
+                              </a>
+                           </ul>
+                        </div>
+                        <div class="col-md-3 col-6">
+                           <h6>Customer Service</h6>
+                           <ul>
+                              <a href="">
+                                 <li>Help Center</li>
+                              </a>
+                              <a href="">
+                                 <li>Returns</li>
+                              </a>
+                              <a href="">
+                                 <li>Accessbility</li>
+                              </a>
+                              <a href="">
+                                 <li>Contact us</li>
+                              </a>
+                              <a href="">
+                                 <li>store pickup</li>
+                              </a>
+                           </ul>
+                        </div>
+                        <div class="col-md-3 col-6 mt-4">
+                           <h6>policy</h6>
+                           <ul>
+                              <a href="">
+                                 <li>return policy</li>
+                              </a>
+                              <a href="">
+                                 <li>term of use</li>
+                              </a>
+                              <a href="">
+                                 <li>security</li>
+                              </a>
+                              <a href="">
+                                 <li>privacy</li>
+                              </a>
+                           </ul>
+                        </div>
+                        <div class="col-md-3 col-6 mt-4">
+                           <h6>Categories</h6>
+                           <ul>
+                              <a href="">
+                                 <li>action</li>
+                              </a>
+                              <a href="">
+                                 <li>comedy</li>
+                              </a>
+                              <a href="">
+                                 <li>drama</li>
+                              </a>
+                              <a href="">
+                                 <li>horror</li>
+                              </a>
+                              <a href="">
+                                 <li>kids</li>
+                              </a>
+                              <a href="">
+                                 <li>romantic comedy</li>
+                              </a>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="footer-bottom">
+         <div class="container">
+            <div class="row align-items-center">
+               <div class="col-lg-4 col-md-5 ">
+                  <p class="mt-3 mt-md-0 text-center text-md-start">©2020 Book Worm. All rights reserved</p>
+               </div>
+               <div class="col-lg-5 col-md-7 offset-lg-3 order-first order-md-last">
+                  <div class="d-flex justify-content-end">
+                     <select class="form-select " aria-label="Default select example">
+                        <option selected>English</option>
+                        <option value="1">Azerbaijani</option>
+                        <option value="2">Russian</option>
+                     </select>
+                     <select class="form-select " aria-label="Default select example">
+                        <option selected>$ USD</option>
+                        <option value="1">₼ Azerbaijani Manat</option>
+                        <option value="2">Russian Ruble</option>
+                     </select>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </footer>
+
+   <script src="assets/js/jquery-3.5.1.min.js"></script>
+   <script src="assets/plugins/owl-carousel/js/owl.carousel.min.js"></script>
+   <!-- JavaScript Bundle with Popper -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+   <script src="assets/js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+.bread-content {
+   @include flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 2rem 0;
+   border-top: 1px solid $line-color;
+   border-bottom: 1px solid $line-color;
+   @include medium {
+      padding: 1.5rem 0;
+   }
+
+   .bread {
+      font-size: 1.2rem;
+      font-weight: $font-m;
+   }
+
+   .breadcrumb {
+      font-size: .9rem;
+      margin-bottom: 0;
+      span {
+         margin: 0 .5rem;
+         &::after {
+            @include arrow-right;
+         }
+      }
+   }
+}
+
+.content-inner {
+   margin: 4rem 0;
+   @include medium {
+      margin: 3rem 0;
+   }
+}

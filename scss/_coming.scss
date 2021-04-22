@@ -1,0 +1,21 @@
+.coming {
+   .card {
+      @include inline-flex;
+
+      &-body {
+         .card-title {
+            margin-bottom: .5rem;
+         }
+
+         .card-author {
+            margin: .5rem 0;
+         }
+      }
+   }
+   .card-horizontal {
+      .card-adding {
+         visibility: visible;
+         opacity: 1;
+      }
+   }
+}

@@ -1,0 +1,25 @@
+.order-received {
+   .sidebar-box:first-child {
+      .sidebar-box__title {
+         text-transform: none;
+         text-align: center;
+      }        
+      p {
+         font-weight: $font-m;
+         margin-top: .5rem;
+
+         @include xsmall {
+            margin-top: 0;
+         }
+      }
+   }
+   .order-info {
+      @include xsmall {
+         @include flex;
+         align-items: center;
+         justify-content: space-between;
+         margin-bottom: .5rem;
+         font-size: .9rem;
+      }
+   }
+}

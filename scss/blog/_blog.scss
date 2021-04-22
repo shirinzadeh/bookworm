@@ -1,0 +1,118 @@
+.sidebar-box {
+   .post-image{
+      background-color: $bg-color;
+      img {
+         height: 80px;
+         width: 80px;
+      }
+   }
+
+   .post-info {
+      margin-left: .5rem;
+      &__date {
+         color: $text-color-brown;
+         font-weight: $font-m;
+         margin-top: .5rem;
+      }
+   }
+}
+
+.blog-card {
+   border: none;
+
+   &:hover {
+      .card-image {
+         opacity: .8;
+         @include transition;
+      }
+      // .card-overlay {
+      //    @include transition(1s);
+      //    opacity: 1;
+      //    visibility: visible;
+      // }
+   }
+
+   .card-body {
+      padding-left: 0;
+      padding-right: 0;
+   }
+
+   .card-image {
+      position: relative;
+      @include transition;
+   }
+
+   // .card-overlay {
+   //    opacity: 0;
+   //    visibility: hidden;
+   //    position: absolute;
+   //    top: 50%;
+   //    left: 50%;
+   //    font-size: 4rem;
+   //    padding: 1rem;
+   //    border-radius: 50%;
+   //    background-color: $red;
+   //    @include transform(translate(-50%, -50%));
+   //    @include transition;
+   
+   //    a {
+   //       color: $white;
+   //    }
+   
+   //    &:hover {
+   //       background-color: $white;
+   //       a {
+   //          color: $red;
+   //       }
+   //    }
+   // }
+
+   .blog-img {
+      background-color: $bg-color;
+      height: 350px;
+      max-height: 350px;
+      object-fit: cover;
+
+      @include medium {
+         height: 300px;
+         max-height: 350px;
+      }
+   }
+
+   .card-tag {
+      color: $red;
+   }
+
+   .card-title {
+      font-size: 1.9rem;
+      font-weight: $font-m;
+      color: $text-color;
+      text-transform: inherit;
+
+      @include medium {
+         font-size: 1.3rem;
+      }
+   }
+
+   .card-text {
+      font-size: .9rem;
+      color: $text-color-brown;
+   }
+
+   .card-footer {
+      color: $text-color-brown;
+      background-color: transparent;
+      border-top: none;
+      padding-left: 0;
+      padding-right: 0;
+      margin-bottom: .5rem;
+
+      span {
+         margin-left: 1rem;
+      }
+   }
+}
+
+.pagination {
+   margin-top: 2.5rem;
+}

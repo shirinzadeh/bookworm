@@ -1,0 +1,45 @@
+.offer {
+   &-content {
+      background-color: $blue;
+      padding: 2rem 0;
+      // @include xsmall {
+      //    padding: 0;
+      // }
+   }
+
+   &-column {
+      border-right: 2px solid #364b68;
+      
+      @include flex-center;
+      @include small {
+         justify-content: start;
+      }
+
+      &:last-child {
+         border-right: none;
+      }
+
+      &__inner {
+         @include flex-center;
+         padding: 1rem 0.5rem;
+      }
+   }
+   i {
+      color: $yellow;
+      font-size: 3rem;
+      @include small {
+         font-size: 2.5rem;
+      }
+   }
+
+   &__text {
+      margin-left: 1rem;
+      color: $white;
+      text-transform: capitalize;
+      
+      h5 {
+         font-weight: $font-b;
+         margin-bottom: .5rem;
+      }
+   }
+}

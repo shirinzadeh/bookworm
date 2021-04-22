@@ -1,0 +1,28 @@
+.author {
+   background-color: $bg-color;
+
+   &-image {
+      img {
+         @include medium {
+            height: 50vw;
+            object-fit: contain;
+         }
+         @include xsmall {
+            height: 70vw;
+         }
+      }
+   }
+
+   &-title {
+      text-transform: uppercase;
+      color: $text-color-brown;
+      font-weight: $font-b;
+   }
+
+   &-name {
+      font-size: 1.9rem;
+      font-weight: $font-m;
+      text-transform: capitalize;
+      margin: 1.5rem 0
+   }
+}

@@ -1,0 +1,108 @@
+.hero-wrap {
+   &-bg {
+      background-color: $bg-color;
+      height: 75vh;
+
+      @include medium {
+         height: 55vh;
+      }
+   }
+}
+
+// Counter section
+.counter {
+   padding: 2rem 9rem;
+   @include medium {
+      padding: 2rem 0;
+   }
+   &-col {
+      @include flex-center;
+      flex-direction: column;
+      font-weight: $font-m;
+   }
+
+   &__bread {
+      font-size: 3rem;
+      @include small {
+         font-size: 2.5rem;
+      }
+      @include xsmall {
+         font-size: 1.8rem;
+      }
+   }
+   &__breadcrumb {
+      font-size: 1.25rem;
+      text-transform: capitalize;
+      padding-top: 1.5rem;
+
+      @include small {
+         font-size: 1rem;
+      }
+      @include xsmall {
+         font-size: .8rem;
+         padding-top: 1rem;
+      }
+   }
+}
+
+// Offer section
+.about-offer {
+   .offer {
+      &-content {
+         background-color: white;
+      }
+   
+      &-column {
+         border-right: none;
+      }
+   
+      &__text {
+         color: $text-color;
+      }
+   }
+}
+
+// Team Section
+
+.team {
+   img {
+      width: 280px;
+      max-width: 280px;
+      height: 350px;
+      max-height: 350px;
+   }
+
+   &__member {
+      text-transform: capitalize;
+      padding-top: 1rem;
+      &-position {
+         color: $text-color-brown;
+         font-size: .9rem;
+      }
+   }
+}
+
+// Parners section
+.partners {
+   &-content {
+      padding: 2rem 0;
+      @include flex;
+
+      @include medium {
+         //Scrolling vertically on medium devices
+         //must add scroll-snap-align: center; to child
+         overflow-x: auto;
+         scroll-snap-type: x mandatory;
+         -webkit-overflow-scrolling: touch; /* Important for iOS devices */
+      }
+   }
+   &__partner {
+      margin-right: 2rem;
+      flex: 1 1 auto;
+      @include flex-center;
+      @include medium {
+         scroll-snap-align: center;
+      }
+      
+   }
+}

@@ -1,0 +1,110 @@
+.footer {
+   border-top: 1px solid $line-color;
+   
+   &-top {
+      @include flex-center;
+      flex-direction: column;
+      margin: 5.5rem 0; //same margin size with footer-middle bottom
+      @include small {
+         margin: 3.5rem 0;
+      }
+
+      .section-header {
+         margin-bottom: 1rem;
+      }
+      // p {
+      //    font-size: .9rem;
+      //    color: $text-color-brown;
+      //    margin-bottom: 2.5rem;
+      //    @include small {
+      //       margin-bottom: 1.5rem;
+      //    }
+      // }
+      form {
+         width: 50%;
+         @include flex;
+         @include medium  {
+            width: 70%;
+         }
+         @include small {
+            width: 100%;
+         }
+         @include xsmall {
+            display: block;
+         }
+
+         .form-control {
+            margin-right: 1rem;
+            border-color: $blue;
+            border-radius: $border-radius;
+            padding-left: 1.5rem;
+            @include placeholder {
+            font-size: .9rem;
+            }
+         }
+         .main-btn {
+            @include xsmall {
+               margin: .5rem auto 0;
+               @include flex;
+            }
+         }
+      }
+   }
+
+   &-middle {
+      margin-bottom: 5.5rem;  //same margin size with footer-top
+
+      .footer__list {
+         text-transform: capitalize;
+         @include small {
+            margin-top: 2rem;
+         }
+         h6 {
+            font-weight: $font-b;
+            margin-bottom: 2rem;
+            @include medium {
+               margin-bottom: 1rem;
+            }
+            @include xsmall {
+               margin-bottom: .5rem;
+            }
+         }
+         li {
+            padding: .6rem 0;
+            @include transition;
+
+            @include medium {
+               font-size: .9rem;
+            }
+
+            &:hover {
+               color: $red;
+               margin-left: 3px;
+               @include transition;
+            }
+         }
+         a:focus{
+            color: $red;
+         }
+      }
+   }
+
+   &-bottom {
+      border-top: 1px solid $red;
+      padding: 2rem 0;
+
+      .form-select {
+         border-color: #eae8e4;
+         border-radius: $border-radius;
+         font-size: .9rem;
+         padding: 1rem;
+
+         &:last-child {
+            margin-left: 1.5rem;
+            @include xsmall {
+               margin-left: .5rem;
+            }
+         }
+      }
+   }
+}

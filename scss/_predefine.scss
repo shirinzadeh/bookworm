@@ -1,0 +1,120 @@
+.container {
+  max-width: 1396px !important;
+}
+
+.row {
+  margin-top: 0
+}
+
+.bg-color {
+  background-color: $bg-color;
+}
+
+.logo {
+  padding: 0;
+}
+
+option {
+  padding:1rem !important ;
+}
+
+del {
+  font-size: .9rem;
+  opacity: .5;  
+}
+
+.card-img-top {
+  height: 15vw;
+  object-fit: cover;
+
+  @include medium {
+    height: 30vw;
+  }
+  @include small {
+    height: 40vw;
+  }
+  @include xsmall {
+    height: 55vw;
+  }
+}
+
+//disable blue border when input click
+.form-control:focus {
+  outline: 0 !important;
+  box-shadow: none !important;
+  border-width: 2px;
+}
+.form-select:focus {
+  @extend .form-control:focus;
+}
+.btn:focus {
+  @extend .form-control:focus;
+}
+
+// Padding b/w sections
+.bkrm-section {
+  padding: 6.25rem 0;
+
+  @include medium {
+    padding: 3rem 0;
+  }
+}
+// padding bottom b/w sections
+.bkrm-section-bottom {
+  padding-bottom: 6.25rem;
+
+  @include medium {
+    padding-bottom: 3rem;
+  }
+}
+
+// padding top b/w sections
+.bkrm-section-top {
+  padding-top: 6.25rem;
+
+  @include medium {
+    padding-top: 3rem;
+  }
+}
+
+.subtext {
+  font-size: .9rem;
+  color: $text-color-brown;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  @include small {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.stars {
+  color: $star-color;
+  font-size: .9rem;
+
+  @include large {
+      font-size: .6rem;
+  }
+}
+
+//Align content center
+.text-flex-center {
+  @include flex-center;
+  flex-direction: column;
+  font-weight: $font-m;
+  text-align: center;
+}
+
+// DOM CLASSES
+.is-active {
+  color: $text-color !important;
+  border-bottom: 2px solid $black;
+}
+
+.has-show {
+  display: block !important;
+  opacity: 1 !important;
+}
+
+.has-hide {
+  display: none;
+}

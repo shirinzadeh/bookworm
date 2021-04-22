@@ -1,0 +1,51 @@
+.checkout {
+   &-head {
+      @include flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem;
+      background-color: $white;
+      font-weight: $font-m;
+      margin-bottom: 2rem;
+
+      > a {
+         &:hover {
+            text-decoration: underline;
+         }
+         &:focus {
+            @extend a:hover;
+         }
+         &:first-child {
+            color: $red;
+   
+            @include medium {
+               margin-bottom: .5rem;
+            }
+         }
+      }
+
+      @include medium {
+         flex-direction: column;   
+         align-items: flex-start;      
+      }
+   }
+
+   .sidebar-box {
+      .form-check {
+         align-items: flex-start;
+      }
+
+      .form-check-input[type=checkbox] {
+         margin-top: 0;
+      }
+      
+      details {
+         margin-left: .5rem;
+      }
+   
+      details[open] {
+         width: fit-content;
+      }
+   }
+   
+}

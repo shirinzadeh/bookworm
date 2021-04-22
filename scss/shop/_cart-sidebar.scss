@@ -1,0 +1,54 @@
+   // CART SIDEBAR
+.sidebar {
+   background-color: $white;
+   margin-bottom: 1rem;
+   border-color: $black;
+   @include medium {
+      margin-top: 2rem;
+   }
+
+   .sidebar-box__list {
+      > p {
+         font-weight: $font-m;
+         cursor: pointer;
+      }
+
+      > a {
+         font-weight: $font-m;
+      }
+
+      form {
+         position: relative;
+         width: 100%;
+         max-width: 100%;
+      }
+      
+      button {
+         font-weight: $font-m; 
+         //Apply coupon button
+         &.btn--coupon {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            @include transform(translateY(-50%));
+         }
+      }
+
+      .form-control {
+         padding-top: .7rem;
+         padding-bottom: .7rem;
+         padding-right: 7rem;
+         @include placeholder {
+            font-size: .9rem;
+         }
+      }
+   }
+}
+//Checkout button
+.btn--checkout {
+   width: 100%;
+   max-width: 100%;
+}
+.main-btn {
+   color: $bg-color;
+}

@@ -1,0 +1,22 @@
+.account-sidebar {
+   border-right: 1px solid $line-color;
+
+   &__list {
+      a {
+         display: block;
+         color: $grey;
+         padding: .8rem 0;
+         @include transition;
+
+         &:first-child {
+            padding-top: 2px;
+         }
+
+         &:hover {
+            padding-left: 3px;
+            color: $text-color;
+            @include transition;
+         }
+      }
+   }
+}

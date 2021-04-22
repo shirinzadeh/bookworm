@@ -1,0 +1,201 @@
+.blogsingle {
+
+   .info-header {
+      @include xlarge {
+         top: -9rem;
+      }
+      @include xsmall {
+         top: -12rem;
+      }
+   }
+
+   small {
+      font-size: 14px;
+   }
+
+   &__text {
+      p:first-child {
+         font-weight: $font-m;
+      }
+   }
+
+   &-gallery {
+      margin: 2.5rem 0;
+
+      .owl-carousel .owl-stage {
+         @include flex-center;
+       }
+   }
+
+   .tagcloud {
+      padding: 2rem 0;
+      border-bottom: 1px solid $line-color;
+
+      &-link {
+         @include small {
+            padding: .2rem .5rem;
+         }
+      }
+   }
+
+   &-share {
+      @include flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem 0;
+      p {
+         font-size: 1.25rem;
+         font-weight: $font-m;
+         span {
+            font-size: .9rem;
+            color: $text-color-brown;
+         }
+      }
+
+      &__buttons {
+         .share-btn {
+            @include large {
+               padding: .4rem 1rem;
+            }
+            @include xsmall {
+               padding: .3rem .5rem;
+            }
+
+            span {
+               @include medium {
+                  display: none;
+               }
+            }
+         }
+         .fb {
+            background-color: #306199;
+         }
+         .tw {
+            background-color: #26c4f1;
+         }
+         .wp {
+            background-color: #25d366;
+         }
+
+         i {
+            margin-right: .5rem;
+            @include medium {
+               margin-right: 0;
+            }
+         }
+
+         .more-btn {
+            color: $white;
+            background-color: $black;
+            padding: .8rem;
+            @include large {
+               padding: .4rem;
+            }
+         }
+      }
+   }
+
+   &-author {
+      @include flex;
+      align-items: center;
+      padding: 2.5rem;
+      background-color: $bg-color;
+      @include small {
+         padding: 1.5rem;
+      }
+      @include xsmall {
+         flex-direction: column;
+      }
+
+      .image {
+         width: 120px;
+         height: 120px;
+         background-color: $bg-color;
+         border-radius: 50%;
+         object-fit: cover;
+      }
+
+      .information {
+         margin-left: 2rem;
+         @include xsmall {
+            margin-left: 0;
+            margin-top: 1rem;
+         }
+
+         &__name {
+            font-size: 1.1rem;
+            font-weight: $font-m;
+            text-transform: capitalize;
+         }
+
+         p {
+            margin: .8rem 0;
+         }
+
+         &__social {
+            i {
+               margin: 0 .5rem;
+            }
+         }
+      }
+   }
+
+   &-control {
+      @include flex;
+      justify-content: space-between;
+      padding: 2rem 0;
+      @include xsmall {
+         flex-direction: column
+      }
+
+      .post-prev {
+         @include flex;
+         align-items: center;
+
+         i {
+            font-size: 1rem;
+            padding: 1rem;
+            background-color: $bg-color;
+            border-radius: 50%;
+            color: $text-color-brown;
+         }
+
+         .post-info {
+            margin-left: 1rem;
+            padding: 0;
+            @include xsmall {
+               margin-bottom: 1rem;
+            }
+            .post-title {
+               text-transform: uppercase;
+               color: $text-color-brown;
+            }
+            .post-name {
+               font-size: 1rem ;
+               font-weight: $font-m;
+               @include small {
+                  font-size: .9rem;
+               }
+            }
+         }
+      }
+
+      .post-next {
+         @extend .post-prev;
+         text-align: right;
+         .post-info {
+            margin-right: 1rem;
+         }
+      }
+   }
+
+   .recommend {
+      border-bottom: 1px solid $line-color;
+      &-img {
+         height: 250px;
+         @include medium {
+            height: 200px;
+         }
+      }
+   }
+}

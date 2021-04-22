@@ -1,0 +1,263 @@
+.shop-single {
+   border-bottom: 1px solid $line-color;
+}
+
+.shop-info {
+   padding: 3rem;
+   font-size: .9rem ;
+   border-left: 1px solid $line-color;
+   @include medium {
+      padding-left: 1rem;
+      padding-right: 1rem;
+   }
+
+   p {
+      color: $grey;
+   }
+
+   .shop-title {
+      font-size: 1.9rem;
+      font-weight: $font-m;
+      text-transform: capitalize;
+      margin-bottom: 1.5rem;
+   }
+
+   .shop-rating {
+      @include flex;
+
+      .shop-stars {
+         color: $star-color;
+      }
+
+      .shop-reviews {
+         margin-left: .7rem;
+         margin-right: 1rem;
+      }
+   }
+
+   .shop-price {
+      font-size: 1.5rem;
+      font-weight: $font-m;
+      margin: 1.8rem 0;
+   }
+
+   .shop-format {
+      margin-bottom: 1.8rem;
+
+      input {
+         display: none;
+      }
+
+      label {
+         font-weight: $font-m;
+         cursor: pointer;
+      }
+   }
+
+   .quantity {
+      border-radius: $border-radius;
+      margin-top: 2.5rem;
+      margin-right: 1rem;
+      line-height: 1rem;
+
+      button {
+         border: none;
+         padding: .7rem 1rem;
+         background-color: transparent;
+      }
+   } 
+
+   &-bottom {
+      padding: 2rem 3rem;
+      border-top: 1px solid $line-color;
+      border-left: 1px solid $line-color;
+      @include small {
+         padding: 2rem 1rem;
+      }
+   }
+
+   .btn {
+      padding: .5rem 2rem;
+      font-size: .9rem;
+   }
+}
+
+/* NAV TABS */
+
+.shop-info-nav {
+   .nav-link {
+      padding-left: .5rem;
+      padding-right: .5rem;
+   }
+}
+.nav-pills .nav-link {
+   @include flex;
+   flex-direction: column;
+   border-radius: 0;
+   margin-right: 2rem;
+   @include medium {
+      margin-right: 1rem;
+   }
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+   background-color: transparent;
+   color: $text-color;
+   border-bottom: 2px solid $black;
+   font-weight: $font-m;
+}
+.tab-content {
+   line-height: 1.5rem;
+}
+
+.shop-tabs {
+   .nav-link {
+      padding: 2.8rem 0;
+      @include small {
+         padding: 1.5rem 0;
+      }
+   }
+
+   &-card {
+      position: relative;
+   }
+   .video-duration {
+      padding: .5rem 1rem;
+      font-size: .9rem;
+      background-color: $black;
+      color: $white;
+      display: inline;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      @include medium {
+         padding: .3rem .5rem;
+      }
+      @include xsmall  {
+         padding: .5rem 1.5rem;
+      }
+   }
+
+   .card-hover {
+      @include transition;
+      &:hover {
+         opacity: .5;
+         @include transition;
+      }
+
+      .card-overlay {
+         background-color: $blue;
+         padding: 0;
+         &:hover {
+            background-color: $white;
+            border: 1px solid $blue;
+            a {
+               color: $blue;
+            }
+         }
+      }
+   }
+
+   /* REVIEW TABS */
+
+   .reviews-average {
+      font-weight: $font-m;
+      
+      .reviews-sidebar {
+         @include flex;
+         flex-direction: column;
+
+         &__rating {
+            @include flex;
+            align-items: center;
+            margin-bottom: 2rem;
+   
+            .reviews-score {
+               font-size: 3.8rem;
+               font-weight: $font-b;
+            }
+   
+            .reviews-count {
+               font-size: .9rem;
+               margin-left: 1rem;   
+            }
+         }
+      }
+
+      .star-table {
+         @include flex;
+         align-items: center;
+         margin-bottom: .5rem;
+
+         .progress {
+            margin: 0 1rem;
+            height: .5rem;
+         }
+
+         .progress-bar {
+            background-color: $star-color;
+         }
+      }
+   }
+}
+
+/* ALL REVIEWS */
+
+.review {
+   padding: 2rem 0;
+   
+   &-head {
+      font-size: 1.2rem;
+      font-weight: $font-m;
+      margin: 2rem 0;
+   }
+
+   &-inset {
+      border-bottom: 1px solid $line-color;
+      padding: 2rem 0;
+
+      &__title {
+         font-weight: $font-m;
+         display: inline-block;
+         margin-right: 1rem;
+      }
+
+      &__text {
+         font-size: .9rem;
+         padding: 1.5rem 0;
+      }
+
+      &__date {
+         font-size: .9rem;
+         color: $text-color-brown;
+      }
+
+      &__buttons {
+         margin-top: 1.8rem;
+         
+         i {
+            font-size: 1.3rem;
+            cursor: pointer;
+         }
+
+         span {
+            font-size: .9rem;
+            color: $text-color-brown;
+            margin-right: 2rem;
+         }
+      }
+   }
+}
+
+/* ADD A REVIEW */
+.newreview {
+   .stars {
+      cursor: pointer;
+      i {
+         font-size: 1.3rem;
+         margin-right: 1rem;
+         &:first-child {
+            margin-left: 1rem;
+         }
+      }
+   }
+}

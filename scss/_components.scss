@@ -1,0 +1,610 @@
+/* HEADING */
+
+.heading {
+  font-weight: $font-m;
+  font-size: 1.9rem;
+  padding: 3.5rem 0;
+  text-transform: capitalize;
+
+  @include small {
+    font-size: 1.6rem;
+    padding: 2.5rem 0;
+  }
+  @include xsmall {
+    font-size: 1.4rem;
+  }
+}
+
+// CENTER HEADING
+.heading-center {
+  @extend .heading;
+  text-align: center;
+}
+
+/* HEADING OF SECTIONS */
+
+.section-header {
+  @include flex;
+  justify-content: space-between;
+  text-transform: capitalize;
+  margin-bottom: 2.5rem;
+  @include medium {
+    margin-bottom: 1.5rem;
+  }
+
+  .heading {
+    padding: 0;
+  }
+
+  .heading-btn {
+    color: $red;
+    font-weight: $font-m;
+    @include flex;
+    align-items: center;
+    @include xsmall {
+      font-size: .9rem;
+    }
+
+    &::after {
+      @include arrow-right;
+      padding-left: .9rem;
+      font-size: 1.5rem;
+
+      @include xsmall {
+        padding-left: .2rem;
+      }
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+/* DISCOUNT */
+
+.save {
+  height: 6.25em;
+  width: 6.25em;
+  font-weight: $font-m;
+  background-color: $blue;
+  border-radius: 50%;
+  margin: auto;
+  text-align: center;
+  position: relative;
+
+  @include xsmall {
+    height: 5em;
+    width: 5em;
+  }
+
+  &-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include transform(translate(-50%, -50%));
+    color: $yellow;
+
+    &__price {
+      padding-top: .7rem;
+      font-size: 1.5rem;
+
+      @include xsmall {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+
+/* OWL CAROUSEL */
+
+.owl-carousel .owl-nav  {
+  margin: 0;
+  button.owl-prev {
+    width: 45px;
+    height: 45px;
+    background-color: $white;
+    border-radius: 50%;
+    margin: 0;
+    box-shadow: 0 0 10px 5px #f8efef;
+    position: absolute;
+    top: 50%;
+    @include transition;
+    @include transform(translateY(-50%));
+    @include xsmall {
+      width: 40px;
+      height: 40px;
+    }
+
+    &:hover {
+      background-color: $blue;
+      @include transition;
+
+      span {
+        color: $white !important;
+      }
+    }
+    &:focus {
+      @extend button.owl-prev:hover;
+    }
+
+    span {
+      font-size: 2rem;
+      font-weight: $font-b;
+      color: $blue;
+      display: inline-block !important;
+    }
+  }
+  button.owl-next {
+    @extend button.owl-prev;
+  }
+  .owl-prev {
+    left: 0;
+  }
+  .owl-next {
+    right: 0;
+  }
+}
+
+.owl-theme .owl-dots .owl-dot  {
+  outline: none;
+  margin-right: 5px;
+  &.active {
+    border: 2px solid $text-color;
+    border-radius: 50%;
+  }
+  span {
+    width: 7px;
+    height: 7px;
+    background-color: #dccccc;
+    margin: 5px;
+  }
+}
+
+/* // enable scroll owl carousel on mobile */
+.owl-carousel .owl-stage, .owl-carousel.owl-drag .owl-item{
+  -ms-touch-action: auto;
+      touch-action: auto;
+}
+
+/* CATEGORIES SECTION TAB ARROW */
+
+.tab-bottom-arrow {
+  position: relative;
+  &::after {
+    content: '';
+    width: 0; 
+    height: 0; 
+    border-left: 1.5rem solid transparent;
+    border-right: 1.5rem solid transparent;
+    border-bottom: 1.5rem solid $white;
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+/* CATEGORIES SECTION TAB CLASSES */
+
+.tab-1-content {
+  display: none;
+  opacity: 0;
+}
+.tab-2-content{
+  @extend .tab-1-content;
+}
+.tab-3-content{
+  @extend .tab-1-content;
+}
+.tab-4-content{
+  @extend .tab-1-content;
+}
+.tab-5-content{
+  @extend .tab-1-content;
+}
+.tab-6-content{
+  @extend .tab-1-content;
+}
+.tab-7-content{
+  @extend .tab-1-content;
+}
+
+.releases-tab1-content,
+.releases-tab2-content,
+.releases-tab3-content {
+  display: none;
+  opacity: 0;
+}
+
+/* CARD */
+
+.card {
+  @include transition;
+
+  &:hover { 
+    border-color: $blue;
+    @include transition;
+  
+    .card-adding {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  .card-title {
+      text-transform: uppercase;
+      color: $red;
+      font-size: .75rem;
+      font-weight: $font-r;
+      margin-bottom: .7rem;
+  }
+
+  .card-price {
+      font-size: 1.1rem;
+      font-weight: $font-m;
+  }
+
+  .card-rating {
+      @include flex;
+      justify-content: space-between;
+      margin-top: .75rem;
+
+      .stars {
+        font-size: .8rem;
+
+        @include large {
+            font-size: .6rem;
+        }
+      }
+
+      .card-reviews {
+        font-size: .9rem;
+
+        @include large {
+            font-size: .7rem;
+        }
+      }
+  }
+}
+
+.card-text {
+  line-height: 1.5rem;
+}
+
+.card-author {
+  text-transform: capitalize;
+  color: $text-color-brown;
+  font-size: .875rem;
+  margin: .9rem 0;
+}
+
+// ADD TO CART BUTTON
+.card-adding {
+  padding-top: 1.5rem;
+  @include flex;
+  justify-content: space-between;
+  visibility: hidden;
+  opacity: 0;
+  @include transition;
+  @include medium {
+    visibility: visible;
+    opacity: 1;
+  }
+  @include xsmall {
+    font-size: .8rem;
+  }
+
+  &__btn {
+    text-transform: uppercase;
+    font-weight: $font-m;
+    position: relative;
+    border-bottom: 2px solid $blue;
+  }
+
+  &__heart {
+    font-weight: $font-b;
+    color: $white;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: $red;
+  }
+}
+
+// WHEN HOVER THE CARD
+.card-hover {
+  .card-overlay {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 4rem;
+    padding: 1rem;
+    border-radius: 50%;
+    background-color: $red;
+    @include transform(translate(-50%, -50%));
+    @include transition;
+
+    a {
+      color: $white;
+    }
+
+    &:hover {
+      background-color: $white;
+      a {
+          color: $red;
+      }
+    }
+}
+  &:hover {
+    .card-overlay {
+      @include transition(1s);
+      opacity: 1;
+      visibility: visible;
+  }
+  }
+}
+
+/* INFORMATION ABOUT SINGLE ITEM */
+
+.info {
+  position: relative;
+  width: 60%;
+  margin: auto;
+  padding: 0 5rem 3rem;
+  font-size: .9rem;
+
+  @include medium {
+    width: 70%;
+  }
+  @include small {
+    padding: 0 3rem 1.5rem;
+  }
+  @include xsmall {
+    padding: 0 1rem ;
+    width: 90%;
+  }
+
+  &-heading {
+    font-size: 1.2rem;
+    margin: 2rem 0;
+    font-weight: $font-m;
+    text-transform: capitalize;
+  }
+
+  &-header {
+    position: absolute;
+    top: -6rem;
+    left: 0;
+    right: 0;
+    padding: 3rem 5rem 1rem;
+    background-color: $white;
+    text-transform: capitalize;
+    @include small {
+        padding: 1.5rem 3rem 1rem;
+        top: -3rem;
+    }
+    @include xsmall {
+        padding: 1.5rem 1rem;
+        font-size: 1.4rem;
+        top: -5rem;
+    }
+
+    h1 {
+      @include small {
+        font-size: 1.7rem;
+      }
+    }
+  }
+
+  &-content {
+    margin-bottom: 3.2rem;
+    padding-top: 4.2rem;
+    line-height: $line-height;
+    @include small {
+      padding-top: 3.2rem;
+    }
+  }
+
+  &__quote {
+    font-weight: $font-m;
+    font-style: italic;
+    @include xsmall {
+        margin-bottom: 2.2rem;
+        font-size: .9rem;
+    }
+  }
+
+  h5 {
+    padding-bottom: 2rem;
+    text-transform: capitalize;
+    @include xsmall {
+      padding-bottom: 1.5rem;
+    }
+  }
+
+  &__text {
+    p {
+      margin-bottom: 2.5rem;
+    }
+  }
+}
+
+/* CONTACT INFORMATION*/
+
+.contact-info {
+  font-size: .9rem;
+  padding: 2rem 0;
+  @include small {
+    font-size: 1rem;
+  }
+}
+.social-info {
+  a {
+    margin-right: 1rem;
+    &:hover {
+      color: $red;
+    }
+    &:focus {
+      @extend a:hover;
+    }
+}
+}
+
+/* PAGINATION */
+
+.pagination {
+.page-item {
+  &.active{
+    .page-link {
+      background-color: $text-color;
+      color: $white;
+      border: none;
+    }
+  }
+}
+.page-link {
+    color: $text-color;
+    padding: .7rem;
+    margin: 0 .3rem;
+    border-color: $line-color;
+
+    &:hover {
+      color: $white;
+      background-color: $blue;
+    }
+  }
+}
+ 
+/* TAG CLOUD */
+
+.tagcloud {
+  @include flex;
+  flex-wrap: wrap;
+
+  &-link {
+    padding: .5rem 1rem;
+    background-color: $bg-color;
+    border-radius: $border-radius;
+    margin-right: .5rem;
+    margin-bottom: .5rem;
+    border:1px solid $black;
+  }
+}
+
+/* COUNTDOWN FOR OFFERS */
+
+//USED IN HOME PAGE SLIDER AND COMING SOON TEMPLATE
+.countdown {
+  @include flex;
+  flex-wrap: wrap;
+  line-height: 1.5rem;
+
+  .number {
+    font-weight: $font-m;
+    font-size: 1.2rem;
+    margin-right: 2.6rem;
+      
+    @include large {
+      margin-right: 1.6rem;
+    }
+    @include xsmall {
+      margin-right: .5rem;
+    }
+  }
+  .tail {
+    font-size: .85rem;
+    font-weight: $font-r !important;
+    margin-left: 3px;
+    text-transform: capitalize;
+  }
+}
+
+/* DRAWER MENU ON MOBILE */
+
+.side-menu {
+  margin: auto;
+  //only in small devices
+  @include small {
+    position: fixed;
+    left: -100%;
+    top: 0px;
+    height: 100%;
+    background-color: $yellow;
+    box-shadow: 0 5px 10px $blue;
+    width: 70%;
+    max-width: 100%;
+    text-align: left;
+    padding: 2rem 1rem 3rem 5rem;
+    z-index: 2;
+    @include transition(.7s);
+
+    .nav-link {
+      padding: 1.5rem 0;
+    }
+
+    .dropdown-menu {
+      background-color: transparent;
+      border: {
+        left: 2px solid $blue;
+        right: none;
+        top: none;
+        bottom: none;
+      };
+
+      .dropdown-item {
+        white-space: inherit !important;  
+        padding: .5rem 1rem !important;
+      }
+    }
+
+    // MAKE SIDEBAR MENU SCROLABLE
+    //give children element overflow scroll for working perfectly on ios
+    .navbar-nav {
+      height: 100%;
+      overflow-y: scroll;
+      -webkit-overflow-scrolling: touch; //for ios devices
+    }
+  }
+}
+
+// AFTER CLICKING THE MENU ICON
+.js-side-menu-open {
+  //disable scrolling on body
+  overflow: hidden;
+  height:100%;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $black;
+    opacity: .4;
+  }
+  
+	.side-menu {
+		left: 0;
+		width: 40%;
+    @include xsmall {
+      width: 80%;
+    }
+	}
+  .toggler-btn {
+    .bar{
+      width: 25px;
+      margin: 6px;
+      @include transition();/*navbar opening time when click the navbar*/   
+
+      &.bar1 {
+        @include transform(translateY(250%) rotate(45deg));
+      }
+      &.bar2{
+        display: none;
+      }
+      &.bar3 {
+        @include transform(translateY(-150%) rotate(-45deg));
+      }
+    }
+  }
+}

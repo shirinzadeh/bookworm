@@ -1,0 +1,15 @@
+.addresses {
+   .sidebar {
+      border: none;
+
+      &-box {
+         padding: 0;
+         border: none;
+      }
+      
+      .addresses-col {
+         @include flex;
+         flex-direction: column;
+      }
+   }
+}

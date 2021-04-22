@@ -1,0 +1,16 @@
+.table {
+   tr {
+      border: 1px solid $line-color;
+   }
+   td {
+      @include medium {
+         white-space: nowrap;
+      }
+   }
+   th {
+      padding: 2rem 1rem;
+   }
+   span {
+      color: $red;
+   }
+}

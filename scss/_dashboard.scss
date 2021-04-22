@@ -1,0 +1,52 @@
+.user {
+   font-size: 1.3rem;
+   font-weight: $font-m;
+   margin-bottom: 2rem;
+
+   small {
+      font-size: initial;
+   }
+}
+
+.dashboard-inner {
+   margin-top: 2.5rem;
+}
+
+.dashboard-icon {
+   @include flex-center;
+   flex-direction: column;
+   padding: 2.5rem 0;
+   border: 1px solid $line-color;
+
+   .btn {
+      @include medium {
+         font-size: 2em;
+      }
+   }
+
+   .fa-stack-1x {
+      top: 0;
+      color: $red;
+   }
+   .fa-stack-2x {
+      @extend .fa-stack-1x;
+      color: $bg-color;
+   }
+
+   &__text {
+      font-size: 1.1rem;
+      font-weight: $font-m;
+      margin-top: 1.2rem;
+   }
+
+   &:hover {
+      .fa-stack-1x {
+         color: $bg-color;
+         @include transition;
+      }
+      .fa-stack-2x {
+         color: $red;
+         @include transition;
+      }
+   }
+}

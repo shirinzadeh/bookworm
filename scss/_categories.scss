@@ -1,0 +1,89 @@
+.categories {   
+   &-tabs {
+      @include flex;
+      justify-content: space-between;
+      margin: 2.5rem 0;
+
+      @include small {
+         //Scrolling vertically on medium devices
+         /* must add scroll-snap-align: center; to child */
+         overflow-x: auto;
+         scroll-snap-type: x mandatory;
+         -webkit-overflow-scrolling: touch; /* Important for iOS devices */
+      }
+
+      &__tab {
+         padding: 2.2rem 2.5rem;
+         cursor: pointer;
+         @include flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+
+         @include large {
+            padding: 1.8rem;
+         }
+         @include medium {
+            padding: 1.3rem;
+         }
+         @include small {
+            scroll-snap-align: start;
+            scroll-snap-stop: always; //prevent the user from accidentally bypassing some important items while scrolling
+         }
+
+         i {
+            font-size: 2.5rem;
+            font-weight: 600;
+
+            @include medium {
+               font-size: 2rem;
+            }
+
+            &.tab-1 {
+               color: #a200fc;
+            }
+            &.tab-2 {
+               color: #f79400;
+            }
+            &.tab-3 {
+               color: #f22c1e;
+            }
+            &.tab-4 {
+               color: #00cdef;
+            }
+            &.tab-5 {
+               color: #ff8e8e;
+            }
+            &.tab-6 {
+               color: #fcb83b;
+            }
+            &.tab-7 {
+               color: #e66262;
+            }
+         }
+         p {
+            font-size: 1.1rem;
+            font-weight: $font-m;
+            margin-top: 1rem;
+            text-transform: capitalize;
+            white-space: nowrap;
+
+
+            @include large {
+               font-size: .9rem;
+            }
+            @include medium {
+               font-size: .8rem;
+            }
+         }
+
+         &.tab-bottom-arrow {
+            &::after{
+               border-left: 1.2rem solid transparent;
+               border-right: 1.2rem solid transparent;
+               border-bottom: 1.2rem solid $white;
+            }
+         }
+      }
+   }
+}

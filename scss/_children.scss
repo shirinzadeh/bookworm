@@ -1,0 +1,98 @@
+.children {
+   &-image {
+      position: relative;
+      @include medium {
+         height: 100%;
+      }
+      img {
+         height: 20vw;
+         object-fit: cover;
+         @include medium {
+            height: 100%;
+         }
+      }
+   }
+
+   .save {
+      position: absolute;
+      top: 5%;
+      left: 5%;
+      background-color: $yellow;
+
+      &-content {
+         color: $blue;
+      }
+   }
+
+   .card {
+      border: none;
+      background-color: transparent;
+      width: 60%;
+      max-width: 60%;
+
+      @include large {
+         width: 100%;
+         max-width: 100%;
+      }
+
+      .card-body {
+         @include xsmall {
+            padding: 2rem 3rem;
+         }
+      }
+
+      &-price {
+         font-size: 1.6rem;
+      }
+
+      &-rating {
+         justify-content: normal !important;
+         .card-reviews {
+            padding-left: 1rem;
+         }
+      }
+
+      &-adding {
+         visibility: visible;
+         opacity: 1;
+         justify-content: start;
+
+         &__btn {
+            margin-right: 1rem;
+         }
+      }
+   }
+   /* Text under carousel */
+   
+   // &-text {
+   //    font-size: 14.5rem;
+   //    font-weight: $font-b;
+   //    text-transform: capitalize;
+   //    text-align: center;
+   //    //Adding stroke to text
+   //    -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+   //    -webkit-text-stroke-width: 2px;
+   //    -webkit-text-stroke-color: #fee9e9;
+
+   //    @include large {
+   //       font-size: 11rem;
+   //    }
+   //    @include medium {
+   //       font-size: 9rem;
+   //    }
+   //    @include small {
+   //       font-size: 6.8rem;
+   //    }
+   //    @include xsmall {
+   //       font-size: 4rem;
+   //    }
+   // }
+
+   //owl carousel class
+   .owl-nav button.owl-prev {
+   @include transform(translateY(50%));
+   }
+   .owl-nav button.owl-next {
+   @extend button.owl-prev;
+   }
+}

@@ -1,0 +1,55 @@
+.pricing-card {
+  text-align: center;
+  border-radius: $border-radius;
+  @include transition;
+  padding: 2rem ; 
+  
+  @include large {
+     padding: 0;
+  }
+
+  .pricing-title {
+     font-size: 1.9rem;
+     font-weight: $font-m;
+     text-transform: capitalize;
+     margin: 1.7rem 0;
+  }
+
+  .pricing-price {
+     font-size: 1.9rem;
+     display: inline;
+     padding: 0 1rem;
+     position: relative;
+
+     &::before {
+       content: '$';
+       font-size: 1.2rem;
+       position: absolute;
+       left: 0;
+     }
+  }
+
+  small {
+     color: $text-color-brown;
+     text-transform: capitalize;
+     display: block;
+     margin: .5rem 0;
+  }
+
+  .pricing-text {
+     margin-top: 4.5rem;
+
+     p {
+        margin: 1rem 0;
+     }
+  }
+
+  .pricing-button {
+     margin-top: 2rem;
+  }
+
+  &:hover {
+     border-color: $black;
+     @include transition;
+  }
+}
